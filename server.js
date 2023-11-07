@@ -1,13 +1,15 @@
 import express from 'express';
 import cors from 'cors';
 import db from './config/database.js';
-import routes from './routes/professor-routes.js';
-import { Curso } from './models/curso-model.js';
-import { Professor } from './models/professor-model.js';
-import { Turma } from './models/turma-model.js';
 import dotenv from 'dotenv';
+import routes from './routes/professor-routes.js';
+
+import { Curso } from './models/curso-model.js';
+import { Professor } from './models/curso-model.js';
+import { Turma } from './models/curso-model.js';
 
 const server = express();
+dotenv.config();
 server.use(express.json());
 server.use(cors());
 
