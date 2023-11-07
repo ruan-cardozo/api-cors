@@ -1,5 +1,6 @@
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
+dotenv.config();
 
 // const db = new Sequelize('teste', 'root', '',{
 //     host: 'localhost',
@@ -13,7 +14,7 @@ const dbHost = process.env.DB_HOST;
 const dbDialect = process.env.DB_DIALECT;
 
 
-const db = new Sequelize(dbHost, dbUser, dbPass,{
+const db = new Sequelize(dbName, dbUser, dbPass,{
     host: dbHost,
     dialect: dbDialect
 });
