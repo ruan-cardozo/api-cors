@@ -1,7 +1,7 @@
-import { Express } from 'express';
+import express from 'express';
 import cors from 'cors';
 import db from './config/database.js';
-import routes from './routes/routes.js';
+import routes from './routes/professor-routes.js';
 import { Curso } from './models/curso-model.js';
 import { Professor } from './models/professor-model.js';
 import { Turma } from './models/turma-model.js';
