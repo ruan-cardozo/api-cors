@@ -1,11 +1,11 @@
-import express from 'express';
-import { getProfessores, createProfessor, updateProfessor, deleteProfessor } from '../controllers/professor-controller.js';
+import express from 'express'
+import professorController from '../controllers/professor-controller.js';
 
-const router = express.Router();
+const router = express.Router()
 
-router.get('/professores', getProfessores);
-router.post('/professor/inserir', createProfessor);
-router.put('/professor/editar/:matr', updateProfessor);
-router.delete('/professor/deletar/:matr', deleteProfessor);
+router.get('/professores', professorController.getProfessores)
+router.post('/professor/inserir', professorController.createProfessor)
+router.put('/professor/editar/:matr_professor', professorController.updateProfessor)
+router.delete('/professor/deletar/:matr_professor', professorController.deleteProfessor)
 
-export default router;
+export { router }
