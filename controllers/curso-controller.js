@@ -30,7 +30,7 @@ export const updateCurso = async (req, res) => {
       },
     })
     res.json({
-      message: 'O curso' + req.params.id_curso + 'atualizado com sucesso!',
+      message: 'O curso' + ' ' + req.params.id_curso + ' ' + 'atualizado com sucesso!',
     })
   } catch (e) {
     console.error('Ocorreu um erro ao atualizar um curso: ', e)
@@ -43,7 +43,7 @@ export const deleteCurso = async (req, res) => {
       where: { id_curso: req.params.id_curso },
     })
     res.json({
-      message: 'O curso' + req.params.id_curso + 'deletado com sucesso!',
+      message: 'O curso' + ' ' + req.params.id_curso + ' ' + 'deletado com sucesso!',
     })
   } catch (e) {
     console.error('Ocorreu um erro ao deletar um curso: ', e)

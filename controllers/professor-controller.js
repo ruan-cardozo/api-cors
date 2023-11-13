@@ -29,7 +29,7 @@ export const updateProfessor = async (req, res) => {
       },
     })
     res.json({
-      message: 'O Professor' + req.params.matr + 'atualizado com sucesso!',
+      message: 'O Professor' + ' ' + req.params.matr_professor + ' ' + 'atualizado com sucesso!',
     })
   } catch (e) {
     console.error('Ocorreu um erro ao atualizar um professor: ', e)
@@ -42,7 +42,7 @@ export const deleteProfessor = async (req, res) => {
       where: { matr_professor: req.params.matr_professor },
     })
     res.json({
-      message: 'O Professor' + req.params.matr + 'deletado com sucesso!',
+      message: 'O Professor' + ' ' + req.params.matr_professor + ' ' + 'deletado com sucesso!',
     })
   } catch (e) {
     console.error('Ocorreu um erro ao deletar um professor: ', e)

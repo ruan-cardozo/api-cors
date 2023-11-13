@@ -1,9 +1,7 @@
 import { Turma } from '../models/turma-model.js';
-import db from '../config/database.js';
 
 export const getTurmas = async (req, res) => {
   try {
-    await db.authenticate();
     const turmas = await Turma.findAll()
     res.send(turmas)
   } catch (e) {
@@ -30,7 +28,7 @@ export const updateTurma = async (req, res) => {
       },
     })
     res.json({
-      message: 'A turma' + req.params.id_turma + 'atualizada com sucesso!',
+      message: 'A turma' + ' ' + req.params.id_turma + ' ' + 'atualizada com sucesso!',
     })
   } catch (e) {
     console.error('Ocorreu um erro ao atualizar uma turma: ', e)
@@ -43,7 +41,7 @@ export const deleteTurma = async (req, res) => {
       where: { id_turma: req.params.id_turma },
     })
     res.json({
-      message: 'A turma' + req.params.id_turma + 'deletada com sucesso!',
+      message: 'A turma' + ' ' + req.params.id_turma + ' ' + 'deletada com sucesso!',
     })
   } catch (e) {
     console.error('Ocorreu um erro ao deletar uma turma: ', e)
