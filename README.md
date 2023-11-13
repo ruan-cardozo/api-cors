@@ -1,1 +1,1 @@
-Exercicio CRUD com Sequelize e CORS -> Para a matéria Programação Server Side.
+Exercicio Server Side
