@@ -1,13 +1,13 @@
 import dotenv from 'dotenv'
 import cors from 'cors'
 import express from 'express'
-import db from './config/database.js'
-import { Curso } from './models/curso-model.js'
-import { Professor } from './models/professor-model.js'
-import { Turma } from './models/turma-model.js'
-import { router as professorRoutes } from './routes/professor-routes.js'
-import { router as cursoRoutes } from './routes/curso-routes.js'
-import { router as turmaRoutes } from './routes/turma-routes.js'
+import db from './src/config/database.js'
+import { Curso } from './src/models/curso-model.js'
+import { Professor } from './src/models/professor-model.js'
+import { Turma } from './src/models/turma-model.js'
+import { router as professorRoutes } from './src/routes/professor-routes.js'
+import { router as cursoRoutes } from './src/routes/curso-routes.js'
+import { router as turmaRoutes } from './src/routes/turma-routes.js'
 
 const server = express()
 server.use(express.json())
